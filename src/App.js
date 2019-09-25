@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
+import CardCreator from './components/CardCreator.js';
+import AxiosData from "./components/axiosData.js";
+
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1>NASA Image of the Day</h1>
+      {/*<CardCreator />*/}
+      <AxiosData />
     </div>
   );
 }
