@@ -5,12 +5,12 @@ import AxiosData from "./components/axiosData.js";
 
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <h1>NASA Image of the Day</h1>
-      {/*<CardCreator />*/}
-      <AxiosData />
+      <CardCreator />
+      {/*<AxiosData />*/}
     </div>
   );
 }
