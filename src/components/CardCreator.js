@@ -8,7 +8,6 @@ function CardCreator(props) {
             <img className="cardImg" src={props.mediaSRC}/>
 
             <div className="cardBody">
-                <h3>Description</h3>
                 <p>{props.description}</p>
             </div>
         </div>
