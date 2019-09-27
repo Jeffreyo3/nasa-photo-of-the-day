@@ -1,38 +1,38 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
-import CardCreator from "./CardCreator.js";
+// import React, {useState, useEffect} from "react";
+// import axios from "axios";
+// import CardCreator from "./CardCreator.js";
 
-function getImageData () {
+// function getImageData () {
 
-    const [imageState, setImageState] = useState([]);
+//     const [imageState, setImageState] = useState([]);
 
-    useEffect(() => {
-        axios
-        .get("https://api.nasa.gov/planetary/apod?api_key=egzW1GEaRzy8RZPDV3Cp4OhnEhsRZfMiW8bG3Ej2")
-        .then(imageState => {
-            setImageState(imageState.data);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+//     useEffect(() => {
+//         axios
+//         .get("https://api.nasa.gov/planetary/apod?api_key=egzW1GEaRzy8RZPDV3Cp4OhnEhsRZfMiW8bG3Ej2")
+//         .then(imageState => {
+//             setImageState(imageState.data);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//         });
         
 
-    }, []);
+//     }, []);
 
-    return (
-        <div>
-            {image.map(image => {
-                return (
-                    <CardCreator
-                        title={image.title}
-                        key={image.date}
-                        todaysImage={image.hdurl}
-                        description={image.explanation} 
-                    />
-                );
-            })}
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             {image.map(image => {
+//                 return (
+//                     <CardCreator
+//                         title={image.title}
+//                         key={image.date}
+//                         todaysImage={image.hdurl}
+//                         description={image.explanation} 
+//                     />
+//                 );
+//             })}
+//         </div>
+//     );
+// }
 
-export default getImageData;
+// export default getImageData;
