@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = (props) => {
 
     return(
 
         <footer>
-            <p className="footerTxt">
-                Created by Jeffrey Orndorff
-            </p>
+            <div className="footerTxt">
+                <p>Image Copyright {props.copyright}</p>
+                <p>WebApp Created by Jeffrey Orndorff</p>
+            </div>
         </footer>
 
     );

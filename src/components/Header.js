@@ -1,13 +1,10 @@
 import React from "react";
+import { Card } from 'reactstrap';
 
-const Header = (props) => {
+const Header = () => {
     return(
         <header>
             <h1 className="title">🚀 NASA Picture of the Day 🚀</h1>
-            <div className="imageHeader">
-                <h2>Title: {props.title}</h2>
-                <p>Date: {props.date}</p>
-            </div>
         </header>
     );
 };

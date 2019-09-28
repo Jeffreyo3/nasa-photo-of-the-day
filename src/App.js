@@ -13,6 +13,7 @@ function App() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [copyright, setCopyright] = useState("");
 
   useEffect(() => {
 
@@ -23,6 +24,7 @@ function App() {
         setDate(result.data.date);
         setTitle(result.data.title);
         setDescription(result.data.explanation);
+        setCopyright(result.data.copyright);
 
       })
       .catch(err =>
@@ -35,15 +37,16 @@ function App() {
     <div className="App">
       <div className="appContainer">
 
-        <Header title={title} date={date}/>
+        <Header />
 
-        <CardCreator mediaSRC={mediaSRC} description={description}/>
+        <CardCreator date={date} title={title} mediaSRC={mediaSRC} description={description}/>
 
       </div>
 
-      <Footer />
+      <Footer copyright={copyright}/>
 
     </div>
+    
   );
 }
 
