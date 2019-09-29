@@ -44,7 +44,6 @@ function App() {
 
           <Header />
 
-          <img src="./components/img/loading-wheel.gif"></img>
           <h3>Loading . . .</h3>
 
         </div>
