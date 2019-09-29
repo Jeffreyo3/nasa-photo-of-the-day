@@ -1,15 +1,19 @@
 import React from "react";
-import { Card, CardTitle, CardText, CardImg, Button, CardBody, UncontrolledCollapse, Badge, Container, Row, Col } from 'reactstrap';
+import MediaCheck from './MediaCheck.js';
+import { Card, CardTitle, CardImg, Button, CardBody, UncontrolledCollapse, Container, Row, Col } from 'reactstrap';
 
 
 function CardCreator(props) {
+
 
     return (
         <div>
 
             <Container className="buttonContent">
                 <Row>
-                    <Col><CardTitle>Title: {props.title}</CardTitle></Col>
+                    <Col>
+                        <CardTitle>Title: {props.title}</CardTitle>
+                    </Col>
                     <Col>
                         <Button color="secondary" id="toggler" style={{ padding: '1% 3%', margin: '.25% auto'}}>View Desciption
                         </Button>

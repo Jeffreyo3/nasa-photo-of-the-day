@@ -14,6 +14,7 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [copyright, setCopyright] = useState("");
+  const [mediaType, setMediaType] = useState("");
 
   useEffect(() => {
 
@@ -25,6 +26,7 @@ function App() {
         setTitle(result.data.title);
         setDescription(result.data.explanation);
         setCopyright(result.data.copyright);
+        setMediaType(result.data.media_type);
 
       })
       .catch(err =>
@@ -33,21 +35,44 @@ function App() {
   }, []);
 
 
-  return (
-    <div className="App">
-      <div className="appContainer">
+  if (!mediaSRC) {
 
-        <Header />
+    return (
 
-        <CardCreator date={date} title={title} mediaSRC={mediaSRC} description={description}/>
+      <div className="App">
+        <div className="appContainer">
+
+          <Header />
+
+          <img src="./components/img/loading-wheel.gif"></img>
+          <h3>Loading . . .</h3>
+
+        </div>
+
+        <Footer copyright={copyright}/>
 
       </div>
 
-      <Footer copyright={copyright}/>
+    );
 
-    </div>
-    
-  );
+  } else {
+
+    return (
+      <div className="App">
+        <div className="appContainer">
+
+          <Header />
+
+          <CardCreator mediaType={mediaType} date={date} title={title} mediaSRC={mediaSRC} description={description}/>
+
+        </div>
+
+        <Footer copyright={copyright}/>
+
+      </div>
+      
+    );
+  }
 }
 
 export default App;

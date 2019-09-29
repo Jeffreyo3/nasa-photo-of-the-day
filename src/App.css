@@ -62,3 +62,11 @@
 h1 {
   margin: 2% auto;
 }
+
+.footerTxt p {
+  font-size: 24px;
+}
+
+.footerTxt p:nth-child(2) {
+  font-size: 14px;
+}
