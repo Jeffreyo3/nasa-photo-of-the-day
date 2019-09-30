@@ -12,13 +12,13 @@ function CardCreator(props) {
             <Container className="buttonContent">
                 <Row>
                     <Col>
-                        <CardTitle>Title: {props.title}</CardTitle>
+                        <CardTitle style={{color: 'white'}}>Title: {props.title}</CardTitle>
                     </Col>
                     <Col>
                         <Button color="secondary" id="toggler" style={{ padding: '1% 3%', margin: '.25% auto'}}>View Desciption
                         </Button>
                     </Col>
-                    <Col>Date: {props.date}</Col>
+                    <Col style={{color: 'white'}}>Date: {props.date}</Col>
                 </Row>
             </Container>
 
@@ -31,7 +31,7 @@ function CardCreator(props) {
 
             </UncontrolledCollapse>
 
-            <CardImg src={props.mediaSRC} alt="NASA Image of the Day" />
+            <CardImg src={props.mediaSRC} alt="NASA Image of the Day" style={{ padding: '3px', border: '5px solid grey', borderRadius: '10px'}} />
         </div>
     );
 }
