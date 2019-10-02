@@ -1,12 +1,12 @@
 import React from "react";
-import { Card, CardTitle, CardImg, Button, CardBody, UncontrolledCollapse, Container, Row, Col } from 'reactstrap';
+import { Card, CardTitle, Button, CardBody, UncontrolledCollapse, Container, Row, Col } from 'reactstrap';
 
 
-function CardCreator(props) {
+function VideoCardCreator(props) {
 
 
     return (
-        <div className="imageContainer">
+        <div className="videoContainer">
 
             <Container className="buttonContent">
                 <Row>
@@ -29,10 +29,11 @@ function CardCreator(props) {
                 </Card>
 
             </UncontrolledCollapse>
-
-            <CardImg src={props.image.hdurl} alt="NASA Image of the Day" style={{ padding: '3px', border: '5px solid grey', borderRadius: '10px'}} />
+            <div className="videoFrame">
+                <iframe className="media" width="800" height="450" src={props.image.url} title="NASA Video of the Day" style={{ padding: '3px', border: '5px solid grey', borderRadius: '10px'}} />
+            </div>
         </div>
     );
 }
 
-export default CardCreator;
+export default VideoCardCreator;

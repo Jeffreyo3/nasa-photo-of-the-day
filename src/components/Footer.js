@@ -1,16 +1,31 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = (props) => {
 
-    return(
 
-        <footer>
-            <p className="footerTxt">
-                Created by Jeffrey Orndorff
-            </p>
-        </footer>
-
-    );
+    if (props.image.copyright !== "") {
+        return (
+            <footer>
+                <div className="footerTxt">
+                    
+                    <p>Image Copyright: Not Listed</p>
+                    <p>WebApp Created by Jeffrey Orndorff </p>
+                    <p>Background Tile from: <a href="http://background-tiles.com">Background Tiles</a></p>
+                </div>
+            </footer>
+        )
+    } else {
+        return(
+            <footer>
+                <div className="footerTxt">
+                    
+                    <p>Image Copyright: {props.image.copyright}</p>
+                    <p>WebApp Created by Jeffrey Orndorff © 2019</p>
+                    <p>Background Tile from: <a href="http://background-tiles.com">Background Tiles</a></p>
+                </div>
+            </footer>
+        )
+    }
 };
 
 export default Footer;
