@@ -31,3 +31,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+.appContainer {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.imageHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageHeader h2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.imageHeader p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cardImg {
+  max-width: 80vw;
+  height: auto;
+}
+
+h1 {
+  margin: 2% auto;
+}
