@@ -12,7 +12,6 @@ function App() {
 
 
   const [date, setDate] = useState("");
-  const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
 
   useEffect(() => {
@@ -29,8 +28,6 @@ function App() {
         console.log(err));
 
   }, [date]);
-
-  console.log(image);
 
   if (!image.url) {
 
