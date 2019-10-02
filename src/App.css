@@ -84,3 +84,7 @@ h1 {
   color: white;
 }
  
+.videoFrame {
+  display: flex;
+  justify-content: center;
+}

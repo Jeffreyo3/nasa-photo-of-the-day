@@ -1,10 +1,11 @@
 import React from "react";
-import { Card } from 'reactstrap';
 
-const Header = () => {
+const Header = (props) => {
+
     return(
         <header>
-            <h1 className="title">🚀 NASA Picture of the Day 🚀</h1>
+            {(props.image.media_type === "video") ? <h1 className="title">NASA Video of the Day</h1> : <h1 className="title">NASA Image of the Day</h1>}
+            
         </header>
     );
 };

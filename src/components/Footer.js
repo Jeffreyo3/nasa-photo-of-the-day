@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = (props) => {
 
 
-    if (props.copyright !== "") {
+    if (props.image.copyright !== "") {
         return (
             <footer>
                 <div className="footerTxt">
@@ -19,7 +19,7 @@ const Footer = (props) => {
             <footer>
                 <div className="footerTxt">
                     
-                    <p>Image Copyright: {props.copyright}</p>
+                    <p>Image Copyright: {props.image.copyright}</p>
                     <p>WebApp Created by Jeffrey Orndorff © 2019</p>
                     <p>Background Tile from: <a href="http://background-tiles.com">Background Tiles</a></p>
                 </div>
