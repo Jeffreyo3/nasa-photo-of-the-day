@@ -30,7 +30,7 @@ function VideoCardCreator(props) {
 
             </UncontrolledCollapse>
             <div className="videoFrame">
-                <iframe className="media" width="900" height="506" src={props.image.url} title="NASA Video of the Day" style={{ padding: '3px', border: '5px solid grey', borderRadius: '10px'}} />
+                <iframe className="media" width="800" height="450" src={props.image.url} title="NASA Video of the Day" style={{ padding: '3px', border: '5px solid grey', borderRadius: '10px'}} allowfullscreen="true"/>
             </div>
         </div>
     );
