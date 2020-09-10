@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = (props) => {
 
 
-    if (props.image.copyright !== "") {
+    if (!props.image.copyright) {
         return (
             <footer>
                 <div className="footerTxt">
