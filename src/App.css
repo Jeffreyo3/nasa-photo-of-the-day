@@ -69,6 +69,10 @@ h1 {
   color: white;
 }
 
+.footerTxt {
+  color: slategray;
+}
+
 .footerTxt p {
   font-size: 24px;
   color: white;
@@ -87,4 +91,8 @@ h1 {
 .videoFrame {
   display: flex;
   justify-content: center;
+}
+
+.footerTxt a {
+  color: slategray;
 }
